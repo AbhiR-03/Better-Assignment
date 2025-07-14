@@ -7,14 +7,14 @@ spec:
   selector:
     matchLabels:
       app: feedback-app
-  templates:
+  template:
     metadata:
       labels:
         app: feedback-app
     spec:
       containers:
-     - name: feedback-app
-       image: rabhi03/feedback-app:v1
-       ports:
+      - name: feedback-app
+        image: rabhi03/feedback-app:latest
+        ports:
           - containerPort: 5000
 
