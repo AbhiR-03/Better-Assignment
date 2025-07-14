@@ -10,3 +10,5 @@ spec:
   - port: 80
     targetPort: 5000
     nodePort: 30036
+
+#Let's check whether it's working or not !
