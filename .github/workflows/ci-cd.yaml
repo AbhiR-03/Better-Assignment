@@ -8,6 +8,9 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
+    env:
+        KUBECONFIG: kubeconfig.yaml
+
     steps:
     - name: Checkout Code
       uses: actions/checkout@v3
@@ -39,8 +42,6 @@ jobs:
 
     - name: Set up kubeconfig
       run: echo "${{ secrets.KUBECONFIG }}" > kubeconfig.yaml
-      env:
-        KUBECONFIG: kubeconfig.yaml
 
     - name: Deploy to Kubernetes
       run: |
